@@ -1,4 +1,3 @@
-from numpy.lib.function_base import average
 from scipy import stats
 from scipy.stats import t as t_dist
 from scipy.stats import chi2
@@ -234,4 +233,13 @@ print(chi2_value(c3_observed_grid)) # this should be .3119402
 print(perform_chi2_homogeneity_test(c3_observed_grid)) # this should be .57649202
 '''
 
-
+ta = data_to_num_list(ttc_a)
+tb = data_to_num_list(ttc_b)
+r = [data_to_num_list(returnRateA), data_to_num_list(returnRateB)]
+print(ta)
+print(tb)
+print(r)
+print(get_t_score(ta, tb))
+print(perform_2_sample_t_test(ta, tb))
+print(chi2_value(r))
+print(perform_chi2_homogeneity_test(r))
